@@ -1,0 +1,14 @@
+To delete the existing leases in a mount path  
+  
+  ```
+  vault delete /sys/raw/sys/expire/id/vaultron_database/creds/<lease_id>
+ 
+ ```
+ 
+ To list the leases of the database engine 
+ 
+vault list /sys/raw/sys/expire/id/vaultron_database/creds/<further_path>
+
+To forcefully revoking a lease 
+
+vault lease revoke -prefix -force <lease_id>
